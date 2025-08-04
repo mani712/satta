@@ -539,7 +539,7 @@
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <a href="#"
-                    class="block bg-green-400 text-white text-center py-textrounded3 hover:bg-green-500 transition duration-300">Guessing
+                    class="block bg-green-400 text-white text-center py-3 hover:bg-green-500 transition duration-300">Guessing
                     Forum</a>
                 <a href="#"
                     class="block bg-green-400 text-white text-center py-3 hover:bg-green-500 transition duration-300">Date
@@ -557,11 +557,12 @@
         </section>
 
         <section class="my-2 mb-0">
-            <h2 class="text-2xl font-bold text-center bg-yellow-400 py-2">
+            <!-- FIXME: REMOVE -->
+            <h2 class="text-2xl font-bold text-center bg-yellow-400 py-2 hidden">
                 SATTA MATKA RESULTS
             </h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
+            <!-- FIXME: REMOVE -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 hidden">
                 <!-- SRIDEVI -->
                 <article class="bg-white shadow-lg p-6 border-x-4 border-green-500 text-center relative">
 
@@ -707,7 +708,7 @@
                         ट्रायल डेमो ओर फ्री गेम वाले कॉल कर के परेशान न करे |</strong>
                 </p>
             </div>
-            <hr class="w-full border border-gray-400">
+            <!-- <hr class="w-full border border-gray-400"> -->
             <!-- panel chart -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 mt-2">
                 <h2 class="text-2xl font-bold text-center bg-yellow-400 py-2">
@@ -868,12 +869,14 @@
                 </svg>
                 <span class="text-xs text-white">Phone</span>
                 <!-- facebook icon -->
-                <a href="https://facebook.com" target="_blank" class="text-yellow-300 hover:text-blue-800">
-                    <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
-                        <path
+                <a href="https://facebook.com" target="_blank" class="flex flex-col items-center text-gray-600 hover:text-blue-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mb-1 text-yellow-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M22 12a10 10 0 10-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.2l-.4 3h-1.8v7A10 10 0 0022 12z" />
                     </svg>
+                    <span class="text-xs text-white">Facebook</span>
                 </a>
+           
 
                 <!-- Home Icon -->
                 <a href="#" class="flex flex-col items-center text-gray-600 hover:text-blue-600">
@@ -887,19 +890,22 @@
                 </a>
 
                 <!-- Instagram -->
-                <a href="https://instagram.com" target="_blank" class="text-yellow-300 hover:text-pink-700 w-10 h-10">
-                    <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
-                        <path
+                <a href="https://instagram.com" target="_blank" class="flex flex-col items-center text-gray-600 hover:text-blue-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mb-1 text-yellow-300" fill="none" 
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M7.75 2A5.75 5.75 0 002 7.75v8.5A5.75 5.75 0 007.75 22h8.5A5.75 5.75 0 0022 16.25v-8.5A5.75 5.75 0 0016.25 2h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm6-1.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3z" />
                     </svg>
+                    <span class="text-xs text-white">Instagram</span>
                 </a>
+                
 
                 <!-- WhatsApp (using chat bubble as placeholder) -->
                 <a href="https://wa.me/8851938024" target="_blank"
                     class="flex flex-col items-center text-gray-600 hover:text-green-500">
                     <!-- Heroicon: Chat Bubble Left -->
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mb-1 text-yellow-300" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor">
+                        viewBox="w-6 h-6 mb-1 text-yellow-300" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.77 9.77 0 01-4-.832L3 21l1.3-3.9A8.962 8.962 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                     </svg>
