@@ -946,22 +946,39 @@
             });
 
         }
+
+ 
+        let sampleData = [];
+        let currentData = [];
         function loadHTML(str) {
             console.log(str);
-            return fetch('./html/table.html')
+            fetch("html/table.html", { cache: "no-cache" })
                 .then(res => res.text())
-                .then(html => document.body.innerHTML = html)
-                .catch(err => document.body.innerHTML = `<p>Error loading ${path}</p>`);
+                .then(html => {
+                    document.body.innerHTML = html;
+                    // let parser = new DOMParser();
+                    // jodiTableHTML = parser.parseFromString(html, 'text/html');
+                    // dateFromInput = jodiTableHTML.getElementById('dateFrom');
+                    // clearFiltersBtn = jodiTableHTML.getElementById('dateTo');
+                    // exportDataBtn = jodiTableHTML.getElementById('exportData');
+                    // tableBody = jodiTableHTML.getElementById('tableBody');
+                    // prevPageBtn = jodiTableHTML.getElementById('prevPage');
+                    // nextPageBtn = jodiTableHTML.getElementById('nextPage');
+                    // pageInfo = jodiTableHTML.getElementById('pageInfo');
+                    // addEventListner();
+                    loadData();                             
+                })
+                .catch(err => console.log(`<p>Error loading</p>`) );
         }
-        page('/game', ()=> loadHTML('game'));
+        page("/game", ()=> loadHTML("game"));
         page();
 
                 //document.addEventListener('DOMContentLoaded', loadData);
         
         // Sample data
-        let sampleData = [];
+      
         function loadData() {
-            fetch('/data/data.json')
+            fetch("data/data.json")
             .then(response => response.json())
             .then(data => {
                 sampleData = data;
@@ -982,7 +999,7 @@
             });
         }
             
-        let currentData = [];
+       
         let currentPage = 1;
         const itemsPerPage = 5;
 
@@ -995,7 +1012,7 @@
         const prevPageBtn = document.getElementById('prevPage');
         const nextPageBtn = document.getElementById('nextPage');
         const pageInfo = document.getElementById('pageInfo');
-        console.log(tableBody);
+       
 
         // Filter data based on date range
         function filterData() {
@@ -1019,10 +1036,9 @@
             const startIndex = (currentPage - 1) * itemsPerPage;
             const endIndex = startIndex + itemsPerPage;
             const pageData = currentData.slice(startIndex, endIndex);
-            console.log(tableBody);
-            tableBody.innerHTML = "";
+            document.getElementById('tableBody').innerHTML = "";
             
-
+            console.log(pageData);
             pageData.forEach(item => {
                 const row = document.createElement('tr');
                 row.className = 'border-b border-gray-200 hover:bg-gray-50';
@@ -1038,7 +1054,7 @@
                     <td class="w-32 h-32 p-4 text-sm text-gray-900 align-middle">${item.sunday || ''}</td>
                 `;
                 
-                tableBody.appendChild(row);
+                document.getElementById('tableBody').appendChild(row);
             });
         }
 
@@ -1046,21 +1062,21 @@
         function updatePagination() {
             const totalPages = Math.ceil(currentData.length / itemsPerPage);
             
-            pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+            document.getElementById('pageInfo').textContent = `Page ${currentPage} of ${totalPages}`;
             
-            prevPageBtn.disabled = currentPage === 1;
-            nextPageBtn.disabled = currentPage === totalPages;
+            document.getElementById('prevPage').disabled = currentPage === 1;
+            document.getElementById('nextPage').disabled = currentPage === totalPages;
             
-            if (prevPageBtn.disabled) {
-                prevPageBtn.classList.add('opacity-50', 'cursor-not-allowed');
+            if (document.getElementById('prevPage').disabled) {
+                document.getElementById('prevPage').classList.add('opacity-50', 'cursor-not-allowed');
             } else {
-                prevPageBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                document.getElementById('prevPage').classList.remove('opacity-50', 'cursor-not-allowed');
             }
             
-            if (nextPageBtn.disabled) {
-                nextPageBtn.classList.add('opacity-50', 'cursor-not-allowed');
+            if (document.getElementById('nextPage').disabled) {
+                document.getElementById('nextPage').classList.add('opacity-50', 'cursor-not-allowed');
             } else {
-                nextPageBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                document.getElementById('nextPage').classList.remove('opacity-50', 'cursor-not-allowed');
             }
         }
 
@@ -1092,31 +1108,36 @@
         }
 
         // Event listeners
-        //dateFromInput.addEventListener('change', filterData);
-        //dateToInput.addEventListener('change', filterData);
-        //clearFiltersBtn.addEventListener('click', clearFilters);
-        //exportDataBtn.addEventListener('click', exportData);
+        function addEventListner() {
+            dateFromInput.addEventListener('change', filterData);
+            dateToInput.addEventListener('change', filterData);
+            clearFiltersBtn.addEventListener('click', clearFilters);
+            exportDataBtn.addEventListener('click', exportData);
+        
+            prevPageBtn.addEventListener('click', () => {
+                if (currentPage > 1) {
+                    currentPage--;
+                    renderTable();
+                    updatePagination();
+                }
+            });
+          
 
-        // prevPageBtn.addEventListener('click', () => {
-        //     if (currentPage > 1) {
-        //         currentPage--;
-        //         renderTable();
-        //         updatePagination();
-        //     }
-        // });
 
-        // nextPageBtn.addEventListener('click', () => {
-        //     const totalPages = Math.ceil(currentData.length / itemsPerPage);
-        //     if (currentPage < totalPages) {
-        //         currentPage++;
-        //         renderTable();
-        //         updatePagination();
-        //     }
-        // });
+            nextPageBtn.addEventListener('click', () => {
+                const totalPages = Math.ceil(currentData.length / itemsPerPage);
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    renderTable();
+                    updatePagination();
+                }
+            });
+        }
+
 
         // Initial render
-        renderTable();
-        updatePagination();
+        // renderTable();
+        // updatePagination();
     </script>
 
     
