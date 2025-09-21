@@ -35,6 +35,8 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary" />
 
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' http://localhost:5500;"> -->
+
     <!-- Favicon -->
     <link rel="icon" href="/././public/favicon.ico" type="image/x-icon" />
     <!-- <link rel="shortcut icon" href="upload/images/favicon.html" type="image/PNG" /> -->
@@ -72,8 +74,10 @@
         </div>
     </header>
 
+
+
     <!-- Main Content -->
-    <main class="container mx-auto px-1">
+    <main id="app" class="container mx-auto px-1">
         <!-- Top Content Section -->
         <section class="bg-matka-bg text-center py-6 mt-0 mb-2">
             <h1 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
@@ -182,8 +186,9 @@
                 SATTA MATKA RESULTS
             </h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
+            <div id="games" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
                 <!-- SRIDEVI -->
+              
                 <article class="bg-white shadow-lg p-6 border-x-4 border-green-500 text-center relative">
 
 
@@ -197,29 +202,32 @@
                         Panel
                     </button>
 
-                    <h3 class="text-xl font-bold text-center mb-4">SRIDEVI</h3>
+                    <h3 class="text-xl font-bold text-center mb-4"></h3>
                     <div class="text-red-600 text-xl font-bold tracking-wider">
-                        117-98-369
+                     
                     </div>
                     <div class="text-sm italic text-gray-700 mt-1">
-                        (11:30 AM - 12:30 PM)
+                        
                     </div>
                 </article>
+                  <div class="bg-matka-gold p-6 border-x-4 border-green-500 hidden">
+                        <p class="text-lg text-gray-800 leading-relaxed">
+                            <strong></strong>
+                        </p>
+                  </div>                
                 <hr class="w-full border border-gray-400" />
+                
+             
                 <!-- TIME BAZAR -->
                 <article class="bg-white p-6 border-x-4 border-green-500 text-center relative">
-
-
                     <button
                         class="absolute left-2 top-1/2 -translate-y-1/2 bg-green-500 text-white px-3 py-1 rounded text-sm hover:bg-green-600">
                         Jodi
                     </button>
-
                     <button
                         class="absolute right-2 top-1/2 -translate-y-1/2 bg-green-500 text-white px-3 py-1 rounded text-sm hover:bg-green-600">
                         Panel
                     </button>
-
                     <h3 class="text-xl font-bold text-center mb-4">TIME BAZAR</h3>
                     <div class="text-red-600 text-xl font-bold tracking-wider">
                         447-55-230
@@ -227,22 +235,12 @@
                     <div class="text-sm italic text-gray-700 mt-1">
                         (01:30 AM - 02:30 PM)
                     </div>
-
-                    <!-- <h3 class="text-xl font-bold text-center mb-4">TIME BAZAR</h3>
-                    <div class="flex justify-between mb-2">
-                        <a href="#" class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600">Jodi
-                            chart</a>
-                        <span class="text-sm text-gray-600">01:00 PM</span>
-                    </div>
-                    <div class="flex justify-between mb-4">
-                        <a href="#" class="bg-green-500 text-white px-3 py-1 rounded text-sm hover:bg-green-600">Panel
-                            chart</a>
-                        <span class="text-sm text-gray-600">02:00 PM</span>
-                    </div>
-                    <div class="text-center text-2xl font-bold text-red-600">
-                        447-55-230
-                    </div> -->
                 </article>
+                  <div class="bg-matka-gold p-6 border-x-4 border-green-500 hidden">
+                        <p class="text-lg text-gray-800 leading-relaxed">
+                            <strong></strong>
+                        </p>
+                  </div> 
                 <hr class="w-full border border-gray-400" />
                 <!-- MILAN DAY -->
                 <article class="bg-white p-6 border-x-4 border-green-500 text-center relative">
@@ -264,6 +262,11 @@
                         (01:30 AM - 02:30 PM)
                     </div>
                 </article>
+                 <div class="bg-matka-gold p-6 border-x-4 border-green-500 hidden">
+                        <p class="text-lg text-gray-800 leading-relaxed">
+                            <strong></strong>
+                        </p>
+                  </div> 
                 <!-- </article> -->
                 <hr class="w-full border border-gray-400" />
                 <!-- RAJDHANI DAY -->
@@ -286,6 +289,11 @@
                         (01:30 AM - 02:30 PM)
                     </div>
                 </article>
+                  <div class="bg-matka-gold p-6 border-x-4 border-green-500 hidden">
+                        <p class="text-lg text-gray-800 leading-relaxed">
+                            <strong></strong>
+                        </p>
+                  </div> 
                 <hr class="w-full border border-gray-400" />
                 <!-- KALYAN (Highlighted) -->
                 <article class="bg-matka-gold p-6 border-x-4 border-green-500 text-center relative">
@@ -306,33 +314,36 @@
                     <div class="text-sm italic text-gray-700 mt-1">
                         (01:30 AM - 02:30 PM)
                     </div>
+                   
+                
                 </article>
-            </div>
+                   <!-- Special Notice -->
+                    <div class="bg-matka-gold p-6 border-x-4 border-green-500">
+                        <p class="text-lg text-gray-800 leading-relaxed">
+                            <strong>☞ बुकिंग चालू ।। बुकिंग चालू ☜<br />
+                                दिनांक 2/3/2023<br />
+                                सिर्फ़ एक गेम बदलेगा आपकी जिंदगी जो आज तक हमसे जुड़ा है वो सिर्फ़
+                                एक बार में मालामाल हुआ है।<br />
+                                सीधा मटका आफ़िस के मेनेजर से लीक गेम सिर्फ 1 ओपन 1 जोड़ी और 2
+                                पत्ती होगी गारंटी चांस 101% अचूक ।<br />
+                                हमारे द्वारा दिया गया अंक और जोड़ी पैसा वापसी की ग्यारंटी के साथ
+                                बूकिंग किया जता है।<br />
+                                यदि आपको दिया गया गेम बाय चान्स फैल होता हे तो 2 घंटे मे एडवांस
+                                वापस दिया जाएगा<br />
+                                या 7 दिन की गेम फ्री भेजा जाएगा|<br /><br />
+                                CALL NOW<br />
+                                9303099299<br /><br />
+                                ट्रायल डेमो ओर फ्री गेम वाले कॉल कर के परेशान न करे |</strong>
+                        </p>
+                    </div>
+            
 
-            <!-- Special Notice -->
-            <div class="bg-matka-gold p-6 border-x-4 border-green-500">
-                <p class="text-lg text-gray-800 leading-relaxed">
-                    <strong>☞ बुकिंग चालू ।। बुकिंग चालू ☜<br />
-                        दिनांक 2/3/2023<br />
-                        सिर्फ़ एक गेम बदलेगा आपकी जिंदगी जो आज तक हमसे जुड़ा है वो सिर्फ़
-                        एक बार में मालामाल हुआ है।<br />
-                        सीधा मटका आफ़िस के मेनेजर से लीक गेम सिर्फ 1 ओपन 1 जोड़ी और 2
-                        पत्ती होगी गारंटी चांस 101% अचूक ।<br />
-                        हमारे द्वारा दिया गया अंक और जोड़ी पैसा वापसी की ग्यारंटी के साथ
-                        बूकिंग किया जता है।<br />
-                        यदि आपको दिया गया गेम बाय चान्स फैल होता हे तो 2 घंटे मे एडवांस
-                        वापस दिया जाएगा<br />
-                        या 7 दिन की गेम फ्री भेजा जाएगा|<br /><br />
-                        CALL NOW<br />
-                        9303099299<br /><br />
-                        ट्रायल डेमो ओर फ्री गेम वाले कॉल कर के परेशान न करे |</strong>
-                </p>
-            </div>
-            <hr class="w-full border border-gray-400" />
-            <!-- Night Games -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 mt-2">
-                <!-- Night game cards similar structure -->
+          
                 <hr class="w-full border border-gray-400" />
+            <!-- Night Games -->
+            <!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 mt-2"> -->
+                <!-- Night game cards similar structure -->
+                <!-- <hr class="w-full border border-gray-400" /> -->
                 <article class="bg-white shadow-lg p-6 border-x-4 border-green-500 text-center relative">
 
                     <button onclick="page.show('/game')"
@@ -353,6 +364,11 @@
                         (11:30 AM - 12:30 PM)
                     </div>
                 </article>
+                  <div class="bg-matka-gold p-6 border-x-4 border-green-500 hidden">
+                        <p class="text-lg text-gray-800 leading-relaxed">
+                            <strong></strong>
+                        </p>
+                  </div> 
                 <hr class="w-full border border-gray-400" />
                 <article class="bg-white shadow-lg p-6 border-x-4 border-green-500 text-center relative">
                     <button
@@ -373,6 +389,11 @@
                         (11:30 AM - 12:30 PM)
                     </div>
                 </article>
+                 <div class="bg-matka-gold p-6 border-x-4 border-green-500 hidden">
+                        <p class="text-lg text-gray-800 leading-relaxed">
+                            <strong></strong>
+                        </p>
+                  </div> 
                 <hr class="w-full border border-gray-400" />
                 <article class="bg-white shadow-lg p-6 border-x-4 border-green-500 text-center relative">
                     <button
@@ -393,6 +414,11 @@
                         (11:30 AM - 12:30 PM)
                     </div>
                 </article>
+                  <div class="bg-matka-gold p-6 border-x-4 border-green-500 hidden">
+                        <p class="text-lg text-gray-800 leading-relaxed">
+                            <strong></strong>
+                        </p>
+                  </div> 
                 <hr class="w-full border border-gray-400" />
                 <article class="bg-white shadow-lg p-6 border-x-4 border-green-500 text-center relative">
                     <button
@@ -413,6 +439,11 @@
                         (11:30 AM - 12:30 PM)
                     </div>
                 </article>
+                 <div class="bg-matka-gold p-6 border-x-4 border-green-500 hidden">
+                        <p class="text-lg text-gray-800 leading-relaxed">
+                            <strong></strong>
+                        </p>
+                  </div> 
                 <hr class="w-full border border-gray-400" />
                 <article class="bg-white shadow-lg p-6 border-x-4 border-green-500 text-center relative">
                     <button
@@ -433,7 +464,12 @@
                         (11:30 AM - 12:30 PM)
                     </div>
                 </article>
-
+                 <div class="bg-matka-gold p-6 border-x-4 border-green-500 hidden">
+                        <p class="text-lg text-gray-800 leading-relaxed">
+                            <strong></strong>
+                        </p>
+                  </div> 
+                <hr class="w-full border border-gray-400" />
                 <!-- MAIN BAZAR (Highlighted) -->
                 <article class="bg-matka-gold p-6 border-x-4 border-green-500 text-center relative">
                     <button
@@ -454,6 +490,11 @@
                         (11:30 AM - 12:30 PM)
                     </div>
                 </article>
+                  <div class="bg-matka-gold p-6 border-x-4 border-green-500 hidden">
+                        <p class="text-lg text-gray-800 leading-relaxed">
+                            <strong></strong>
+                        </p>
+                  </div> 
                 <hr class="w-full border border-gray-400" />
             </div>
         </section>
@@ -811,31 +852,7 @@
                 <a href="#" class="text-red-500 font-bold hover:text-red-400">SATTA MATKA</a>
             </div>
         </div>
-        <!-- TODO:remove block -->
-        <div class="flex space-x-4 justify-center items-center h-20 hidden">
-
-            <!-- Facebook -->
-            <a href="https://facebook.com" target="_blank" class="text-blue-600 hover:text-blue-800">
-                <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                        d="M22 12a10 10 0 10-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.2l-.4 3h-1.8v7A10 10 0 0022 12z" />
-                </svg>
-            </a>
-
-            <!-- Instagram -->
-            <a href="https://instagram.com" target="_blank" class="text-pink-500 hover:text-pink-700 w-10 h-10">
-                <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                        d="M7.75 2A5.75 5.75 0 002 7.75v8.5A5.75 5.75 0 007.75 22h8.5A5.75 5.75 0 0022 16.25v-8.5A5.75 5.75 0 0016.25 2h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm6-1.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3z" />
-                </svg>
-            </a>
-
-            <!-- Gmail -->
-            <!-- <a href="mailto:example@gmail.com" class="text-red-600 hover:text-red-800 w-10 h-10">
-                <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 13.065L2 6.25V18a2 2 0 002 2h16a2 2 0 002-2V6.25l-10 6.815zM22 6V6.01L12 12.75 2 6.01V6a2 2 0 012-2h16a2 2 0 012 2z"/>
-                </svg>
-            </a> -->
+   
 
         </div>
     </footer>
@@ -912,12 +929,99 @@
                     <span class="text-xs text-white">WhatsApp</span>
                 </a>
 
+                <button id="adminBtn" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                    Admin
+                </button>
+
         </div>
     </div>
 
     <!-- Scripts -->
-     <script src="https://unpkg.com/page/page.js"></script>
+ 
+    <script src="https://unpkg.com/navigo"></script> 
     <script type="module">
+       
+        // Update paths to be relative to index.html
+       
+        import { fetchGameData, fetchGameDisplayData, loadHtmlFromFile } from './JS/service.js';
+
+        let gameData;
+        let gameDataDisplay = [];
+        let gameDataDisplayClone = [];
+        let tableData = [];
+        let tableDataClone = [];
+  
+
+        document.addEventListener("DOMContentLoaded", async (e)=>{
+            try {
+                tableData = await fetchGameData();
+                gameDataDisplay = await fetchGameDisplayData();
+                gameDataDisplayClone = [...gameDataDisplay]    
+                tableDataClone = [...tableData];
+                //renderGameTemplate();
+                   
+            } catch (error) {
+                console.log('Error loading data:', error);
+  
+            }
+              
+
+            const router = new Navigo("/");
+         
+                router
+                    .on("/", () => document.getElementById('games').innerHTML = renderGameTemplate())
+                    .on("/table", async () =>  {await window.JodiOrPanel()})
+                    .on("/admin", async () => { await adminPanel()})
+                    .notFound(() => app.innerHTML = "<h1>404 - Not Found</h1>")
+                    .resolve();
+            });
+
+            let adminBtn = document.getElementById('adminBtn');
+
+            adminBtn.addEventListener('click', async ()=>{
+                await adminPanel();
+
+            })
+
+       
+
+
+        function renderGameTemplate() {
+            let finalTemplate = "";
+            
+            for(let game of gameDataDisplayClone) {
+            
+                let template = 
+                    `<article class="bg-white p-6 border-x-4 border-green-500 text-center relative">
+                    <button onClick="JodiOrPanel('${game.game_name}')"
+                        class="absolute left-2 top-1/2 -translate-y-1/2 bg-green-500 text-white px-3 py-1 rounded text-sm hover:bg-green-600">
+                        Jodi
+                    </button>
+                    <button onClick="JodiOrPanel('${game.game_name}')"
+                        class="absolute right-2 top-1/2 -translate-y-1/2 bg-green-500 text-white px-3 py-1 rounded text-sm hover:bg-green-600">
+                        Panel
+                    </button>
+                    <h3 class="text-xl font-bold text-center mb-4">${game.game_name}</h3>
+                    <div class="text-red-600 text-xl font-bold tracking-wider">
+                        ${game.game_data || "Loading..."}
+                    </div>
+                    <div class="text-sm italic text-gray-700 mt-1">
+                        (${game.start_time} - ${game.end_time})
+                    </div>
+                </article>
+                  <div class="bg-matka-gold p-6 border-x-4 border-green-500 hidden">
+                        <p class="text-lg text-gray-800 leading-relaxed">
+                            <strong>${game.slogan}</strong>
+                        </p>
+                  </div> 
+                <hr class="w-full border border-gray-400" />`
+
+                finalTemplate = finalTemplate + template;
+
+            }
+            console.log(finalTemplate);
+            return finalTemplate;
+        }
         
         // Auto refresh page every 5 minutes
         setTimeout(function () {
@@ -937,69 +1041,34 @@
             document.documentElement.scrollTop = 0;
         }
 
-        function openPanel(game) {
-            console.log(game);
-            page('/game', () => {
-            fetch('./html/table.html')
-                .then(res => res.text())
-                .then(html => document.body.innerHTML = html);
-            });
+        window.JodiOrPanel = async function(gameName){
+            
+            try {
+                let tableHTML = await loadHtmlFromFile('./html/table.html');
+                document.getElementById('app').innerHTML = tableHTML;
+                renderTable();
+                updatePagination();
+                router.navigate("/table");
+            } catch(error) {
+                console.log(error);
+            }
+          
+        }
 
+        async function adminPanel() {
+            try {
+            let adminHTML = await loadHtmlFromFile('./html/admin.html');
+            document.getElementById('app').innerHTML = adminHTML;
+            router.navigate("/admin");
+      
+             } catch(error) {
+                console.log(error);
+            }
         }
 
  
         let sampleData = [];
-        let currentData = [];
-        function loadHTML(str) {
-            console.log(str);
-            fetch("html/table.html", { cache: "no-cache" })
-                .then(res => res.text())
-                .then(html => {
-                    document.body.innerHTML = html;
-                    // let parser = new DOMParser();
-                    // jodiTableHTML = parser.parseFromString(html, 'text/html');
-                    // dateFromInput = jodiTableHTML.getElementById('dateFrom');
-                    // clearFiltersBtn = jodiTableHTML.getElementById('dateTo');
-                    // exportDataBtn = jodiTableHTML.getElementById('exportData');
-                    // tableBody = jodiTableHTML.getElementById('tableBody');
-                    // prevPageBtn = jodiTableHTML.getElementById('prevPage');
-                    // nextPageBtn = jodiTableHTML.getElementById('nextPage');
-                    // pageInfo = jodiTableHTML.getElementById('pageInfo');
-                    // addEventListner();
-                    loadData();                             
-                })
-                .catch(err => console.log(`<p>Error loading</p>`) );
-        }
-        page("/game", ()=> loadHTML("game"));
-        page();
-
-                //document.addEventListener('DOMContentLoaded', loadData);
-        
-        // Sample data
-      
-        function loadData() {
-            fetch("data/data.json")
-            .then(response => response.json())
-            .then(data => {
-                sampleData = data;
-                currentData = [...sampleData];
-                renderTable();
-                updatePagination();
-            })
-            .catch(error => {
-                console.error('Error loading data:', error);
-                // Fallback data if JSON fails to load
-                sampleData = [
-                    { id: 1, date: '2024-01-15', monday: '07:00', tuesday: '09:00', wednesday: '14:00', thursday: '10:30', friday: '15:00', saturday: '10:00', sunday: '11:00' },
-                    { id: 2, date: '2024-01-16', monday: '08:00', tuesday: '10:00', wednesday: '15:00', thursday: '11:30', friday: '16:00', saturday: '11:00', sunday: '12:00' }
-                ];
-                currentData = [...sampleData];
-                renderTable();
-                updatePagination();
-            });
-        }
-            
-       
+        let currentData = [];       
         let currentPage = 1;
         const itemsPerPage = 5;
 
@@ -1036,7 +1105,7 @@
             const startIndex = (currentPage - 1) * itemsPerPage;
             const endIndex = startIndex + itemsPerPage;
             const pageData = currentData.slice(startIndex, endIndex);
-            document.getElementById('tableBody').innerHTML = "";
+            //document.getElementById('tableBody').innerHTML = "";
             
             console.log(pageData);
             pageData.forEach(item => {
