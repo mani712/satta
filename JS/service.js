@@ -51,3 +51,23 @@ export async function loadHtmlFromFile(filePath) {
         return null;
     }
 }
+
+export async function fetchDigits(filePath) {
+    try {
+        const response = await fetch( api_URL + `/${filePath}`, {
+            method: 'PUT',
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+        
+        if (!response.ok) {
+            throw new Error(`Failed to load HTML file: ${response.status}`);
+        }
+        
+        return await response.text();
+    } catch (error) {
+        console.error('Error loading HTML:', error, filePath);
+        return null;
+    }
+}

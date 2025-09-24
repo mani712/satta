@@ -929,9 +929,6 @@
                     <span class="text-xs text-white">WhatsApp</span>
                 </a>
 
-                <button id="adminBtn" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-                    Admin
-                </button>
 
         </div>
     </div>
@@ -943,7 +940,7 @@
        
         // Update paths to be relative to index.html
        
-        import { fetchGameData, fetchGameDisplayData, loadHtmlFromFile } from './JS/service.js';
+        import { fetchGameData, fetchGameDisplayData, loadHtmlFromFile, fetchDigits  } from './JS/service.js';
 
         let gameData;
         let gameDataDisplay = [];
@@ -964,6 +961,8 @@
                 console.log('Error loading data:', error);
   
             }
+
+            renderDigits();
               
 
             const router = new Navigo("/");
@@ -971,7 +970,6 @@
                 router
                     .on("/", () => document.getElementById('games').innerHTML = renderGameTemplate())
                     .on("/table", async () =>  {await window.JodiOrPanel()})
-                    .on("/admin", async () => { await adminPanel()})
                     .notFound(() => app.innerHTML = "<h1>404 - Not Found</h1>")
                     .resolve();
             });
@@ -982,6 +980,11 @@
                 await adminPanel();
 
             })
+
+        async function renderDigits() {
+            let response = await fetchDigits('/digits');
+            console.log(response, '/digits');
+        }
 
        
 
@@ -1055,16 +1058,16 @@
           
         }
 
-        async function adminPanel() {
-            try {
-            let adminHTML = await loadHtmlFromFile('./html/admin.html');
-            document.getElementById('app').innerHTML = adminHTML;
-            router.navigate("/admin");
+        // async function adminPanel() {
+        //     try {
+        //     let adminHTML = await loadHtmlFromFile('./html/admin.html');
+        //     document.getElementById('app').innerHTML = adminHTML;
+        //     router.navigate("/admin");
       
-             } catch(error) {
-                console.log(error);
-            }
-        }
+        //      } catch(error) {
+        //         console.log(error);
+        //     }
+        // }
 
  
         let sampleData = [];
